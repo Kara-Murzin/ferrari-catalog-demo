@@ -1,34 +1,34 @@
-# Каталог Ferrari из Японии — демо
+# Ferrari catalog from Japan — demo
 
-Сайт экспортёра автомобилей из Японии и каталог Ferrari, которые сейчас продаются
-на японском рынке. Демо-версия: компания Hayate Motors вымышленная, реквизиты условные.
+A website of a car exporter from Japan and a catalog of the Ferraris that are on sale
+in the Japanese market right now. This is a demo: the company Hayate Motors is fictional and its details are made up.
 
-Открыть: https://kara-murzin.github.io/ferrari-catalog-demo/
+Open: https://kara-murzin.github.io/ferrari-catalog-demo/
 
-## Что внутри
+## What is inside
 
-- **Лендинг** на английском и японском (`site/`, `site/ja/`): услуги, этапы работы, форма заявки,
-  которая открывает WhatsApp с готовым текстом.
-- **Каталог** (`site/catalog/`): около тысячи машин, поиск, фильтры по модели, году, цене, пробегу,
-  кузову и коробке, сортировка, карточка машины, цены в долларах по текущему курсу иены.
-- **Сборщики объявлений** (`scraper/`): Python без зависимостей. Собирают объявления, переводят
-  поля с японского и записывают `site/catalog/data.js`.
-- **Юридические страницы** (`site/legal/`) по требованиям японского законодательства;
-  все реквизиты подставляются из одного файла `site/assets/company.js`.
+- **Landing page** in English and Japanese (`site/`, `site/ja/`): services, work steps, a request form
+  that opens WhatsApp with a ready message.
+- **Catalog** (`site/catalog/`): about a thousand cars, search, filters by model, year, price, mileage,
+  body type and transmission, sorting, a car card, prices in dollars at the current yen rate.
+- **Listing scrapers** (`scraper/`): Python with no dependencies. They collect listings, translate
+  the fields from Japanese and write `site/catalog/data.js`.
+- **Legal pages** (`site/legal/`) as required by Japanese law;
+  all company details come from one file, `site/assets/company.js`.
 
-Сайт статический, без сборки и без сервера.
+The site is static, with no build step and no server.
 
-## Запуск
+## Running
 
 ```bash
 python3 -m http.server 8000 --directory site
 ```
 
-Затем откройте http://localhost:8000.
+Then open http://localhost:8000.
 
-## Что упрощено в демо
+## What is simplified in the demo
 
-- В каталоге оставлены только Ferrari; данные — снимок на одну дату, ежедневное обновление отключено.
-- Фотографии машин загружаются с сайта-источника объявлений и со временем могут пропадать.
-- Режим администратора (ссылки на исходные объявления под паролем) в демо не работает.
-- Фотографии на лендинге — Unsplash.
+- Only Ferraris are left in the catalog; the data is a snapshot for one date, the daily update is turned off.
+- Car photos are loaded from the listing source site and may disappear over time.
+- Admin mode (links to the original listings behind a password) does not work in the demo.
+- Photos on the landing page are from Unsplash.
